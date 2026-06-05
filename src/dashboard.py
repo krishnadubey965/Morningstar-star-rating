@@ -4,7 +4,7 @@ import plotly.express as px
 
 @st.cache_data
 def load_data():
-    return pd.read_csv('C:/Users/Krish/morningstar-project/data/final_ratings.csv')
+    return pd.read_csv('data/final_ratings.csv')
 
 df = load_data()
 
@@ -60,3 +60,4 @@ with col2:
                   color='category', orientation='h',
                   title="MRAR Score by Fund")
     st.plotly_chart(fig2, use_container_width=True)
+    
