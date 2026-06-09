@@ -60,4 +60,9 @@ with col2:
                   color='category', orientation='h',
                   title="MRAR Score by Fund")
     st.plotly_chart(fig2, use_container_width=True)
-    
+    st.divider()
+    st.subheader("Export Data")
+    csv = df.to_csv(index=False)
+    st.download_button(label="Download CSV for Power BI", data=csv, file_name="Morningstar_ratings.csv"),
+mime="text/csv"
+)
